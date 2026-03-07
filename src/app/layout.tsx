@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Investeren Costa del Sol | Ontdek uw Ideale Vastgoedinvestering",
+  title: "Costa del Sol Invest | Ontdek uw Ideale Vastgoedinvestering",
   description:
     "Ontdek waar u het beste kunt investeren aan de Costa del Sol. Vastgoed in Marbella, Estepona & Málaga met 5-8% huurrendement. Gratis investeringsscan in 2 minuten.",
   keywords: [
@@ -26,20 +26,37 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://costadelsolinvest.nl",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
-    title: "Investeren Costa del Sol | Vastgoed met 5-8% Rendement",
+    title: "Costa del Sol Invest | Vastgoed met 5-8% Rendement",
     description:
       "Ontdek de beste vastgoedinvesteringen aan de Costa del Sol. Prijsstijgingen van 10-14% per jaar. Gratis persoonlijke investeringsscan.",
     url: "https://costadelsolinvest.nl",
-    siteName: "Investeren Costa del Sol",
+    siteName: "Costa del Sol Invest",
     locale: "nl_NL",
     type: "website",
+    images: [
+      {
+        url: "https://costadelsolinvest.nl/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Costa del Sol Invest - Uw volgende investering begint hier",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Investeren Costa del Sol | Vastgoed met 5-8% Rendement",
+    title: "Costa del Sol Invest | Vastgoed met 5-8% Rendement",
     description:
       "Ontdek de beste vastgoedinvesteringen aan de Costa del Sol. Gratis persoonlijke investeringsscan.",
+    images: ["https://costadelsolinvest.nl/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -61,7 +78,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://costadelsolinvest.nl/#website",
       url: "https://costadelsolinvest.nl",
-      name: "Investeren Costa del Sol",
+      name: "Costa del Sol Invest",
       description:
         "Vastgoedinvesteringen aan de Costa del Sol voor Nederlandse en Belgische investeerders",
       inLanguage: "nl",
@@ -69,8 +86,10 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://costadelsolinvest.nl/#organization",
-      name: "Investeren Costa del Sol",
+      name: "Costa del Sol Invest",
       url: "https://costadelsolinvest.nl",
+      logo: "https://costadelsolinvest.nl/logo.svg",
+      image: "https://costadelsolinvest.nl/og-image.jpg",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "sales",
@@ -84,7 +103,7 @@ const jsonLd = {
     },
     {
       "@type": "RealEstateAgent",
-      name: "Investeren Costa del Sol",
+      name: "Costa del Sol Invest",
       url: "https://costadelsolinvest.nl",
       areaServed: {
         "@type": "Place",

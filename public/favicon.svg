@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="sunGrad" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#E8762D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Semi-circle sun rising behind buildings -->
+  <path d="M100 360 A156 156 0 0 1 412 360 Z" fill="url(#sunGrad)"/>
+
+  <!-- Tall building (left) -->
+  <rect x="168" y="170" width="80" height="230" rx="6" fill="white"/>
+  <!-- Accent stripe top -->
+  <rect x="168" y="170" width="80" height="12" rx="6" fill="#C45E22"/>
+  <!-- Windows column 1 -->
+  <rect x="183" y="200" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="183" y="240" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="183" y="280" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="183" y="320" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <!-- Windows column 2 -->
+  <rect x="215" y="200" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="215" y="240" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="215" y="280" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="215" y="320" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+
+  <!-- Shorter building (right) -->
+  <rect x="264" y="250" width="80" height="150" rx="6" fill="white"/>
+  <!-- Accent stripe top -->
+  <rect x="264" y="250" width="80" height="12" rx="6" fill="#C45E22"/>
+  <!-- Windows -->
+  <rect x="279" y="278" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="311" y="278" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="279" y="318" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <rect x="311" y="318" width="20" height="24" rx="3" fill="#E8762D" opacity="0.3"/>
+  <!-- Door -->
+  <rect x="294" y="362" width="24" height="38" rx="12" fill="#E8762D" opacity="0.35"/>
+
+  <!-- Wave line at bottom - Mediterranean water -->
+  <path d="M60 420 Q150 395, 256 420 Q362 445, 452 420"
+        stroke="#E8762D" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.45"/>
+</svg>
