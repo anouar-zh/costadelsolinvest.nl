@@ -37,9 +37,14 @@ export default function AppShell({ children }: AppShellProps) {
           </div>
 
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 flex items-center justify-center" style={{ backgroundColor: "#E8762D" }}>
-              <span className="text-white text-sm font-bold">IC</span>
-            </div>
+            <Image
+              src="/logo.svg"
+              alt="Costa del Sol Invest"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+              priority
+            />
             <span className="text-sm font-semibold tracking-wide text-white/70">
               costadelsolinvest.nl
             </span>

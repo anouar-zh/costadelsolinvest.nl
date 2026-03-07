@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { METRO_COLORS } from "@/data/taxonomy";
 import { useI18n } from "@/i18n/context";
 import LanguageSelector from "./LanguageSelector";
@@ -34,9 +35,14 @@ export default function Landing({ onStart }: LandingProps) {
         {/* Top bar: brand + language — mobile only */}
         <div className="metro-slide-in flex items-center justify-between mb-2 md:hidden">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 flex items-center justify-center" style={{ backgroundColor: METRO_COLORS.cta }}>
-              <span className="text-white text-xs font-bold">IC</span>
-            </div>
+            <Image
+              src="/logo.svg"
+              alt="Costa del Sol Invest"
+              width={36}
+              height={36}
+              className="w-9 h-9"
+              priority
+            />
             <span className="text-[11px] font-semibold tracking-wider text-white/50 uppercase">
               costadelsolinvest.nl
             </span>
