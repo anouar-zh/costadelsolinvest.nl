@@ -103,6 +103,10 @@ export interface Translations {
     email: string;
     phone: string;
     message: string;
+    contactMethod: string;
+    contactPhone: string;
+    contactEmail: string;
+    contactWhatsApp: string;
     cta: string;
     sending: string;
     errors: {
@@ -313,6 +317,10 @@ export const translations: Record<Locale, Translations> = {
       email: "E-mail",
       phone: "Telefoon",
       message: "Bericht (optioneel)",
+      contactMethod: "Hoe wilt u gecontacteerd worden?",
+      contactPhone: "Telefoon",
+      contactEmail: "E-mail",
+      contactWhatsApp: "WhatsApp",
       cta: "Boek Mijn Gratis Consult",
       sending: "Verzenden...",
       errors: {
@@ -570,6 +578,10 @@ export const translations: Record<Locale, Translations> = {
       email: "Email",
       phone: "Phone",
       message: "Message (optional)",
+      contactMethod: "How would you like to be contacted?",
+      contactPhone: "Phone",
+      contactEmail: "Email",
+      contactWhatsApp: "WhatsApp",
       cta: "Book My Free Consultation",
       sending: "Sending...",
       errors: {
@@ -827,6 +839,10 @@ export const translations: Record<Locale, Translations> = {
       email: "Correo electrónico",
       phone: "Teléfono",
       message: "Mensaje (opcional)",
+      contactMethod: "¿Cómo prefieres que te contactemos?",
+      contactPhone: "Teléfono",
+      contactEmail: "Correo",
+      contactWhatsApp: "WhatsApp",
       cta: "Reservar Mi Consulta Gratis",
       sending: "Enviando...",
       errors: {
@@ -1084,6 +1100,10 @@ export const translations: Record<Locale, Translations> = {
       email: "E-Mail",
       phone: "Telefon",
       message: "Nachricht (optional)",
+      contactMethod: "Wie möchten Sie kontaktiert werden?",
+      contactPhone: "Telefon",
+      contactEmail: "E-Mail",
+      contactWhatsApp: "WhatsApp",
       cta: "Mein kostenloses Beratungsgespräch buchen",
       sending: "Wird gesendet...",
       errors: {
