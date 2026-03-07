@@ -1,26 +1,233 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Costa del Sol dark theme - warm Mediterranean */
+  --metro-bg: #1A1A1A;
+  --metro-bg-light: #252525;
+  --metro-bg-elevated: #2E2E2E;
+  --metro-text: #FFFFFF;
+  --metro-text-warm: #E8E0D8;
+  --metro-text-muted: rgba(232, 224, 216, 0.45);
+  --metro-cta: #E8762D;
+  --metro-cta-hover: #F08535;
+  --metro-error: #D94040;
+
+  /* Desktop background - subtle gradient */
+  --desktop-bg: #111111;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-metro-bg: var(--metro-bg);
+  --color-metro-bg-light: var(--metro-bg-light);
+  --color-metro-bg-elevated: var(--metro-bg-elevated);
+  --color-metro-text: var(--metro-text);
+  --color-metro-warm: var(--metro-text-warm);
+  --color-metro-muted: var(--metro-text-muted);
+  --color-metro-cta: var(--metro-cta);
+  --color-metro-cta-hover: var(--metro-cta-hover);
+  --color-metro-error: var(--metro-error);
+  --color-desktop-bg: var(--desktop-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  background: var(--desktop-bg);
+  color: var(--metro-text);
+  overflow-x: hidden;
+}
+
+/* ---- Metro tile text readability ---- */
+.metro-tile-text {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Metro tile interactions ---- */
+.metro-tile {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.metro-tile:hover {
+  opacity: 0.90;
+}
+
+.metro-tile:active {
+  transform: scale(0.96);
+  opacity: 0.82;
+}
+
+/* ---- Animations ---- */
+@keyframes metroSlideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes metroSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes metroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes metroPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.metro-slide-in {
+  animation: metroSlideIn 0.35s cubic-bezier(0.1, 0.9, 0.2, 1) both;
+}
+
+.metro-slide-up {
+  animation: metroSlideUp 0.4s cubic-bezier(0.1, 0.9, 0.2, 1) both;
+}
+
+.metro-fade-in {
+  animation: metroFadeIn 0.3s ease both;
+}
+
+/* Staggered tile delays */
+.metro-tile-0 { animation-delay: 0ms; }
+.metro-tile-1 { animation-delay: 50ms; }
+.metro-tile-2 { animation-delay: 100ms; }
+.metro-tile-3 { animation-delay: 150ms; }
+.metro-tile-4 { animation-delay: 200ms; }
+.metro-tile-5 { animation-delay: 250ms; }
+
+/* ---- Tile 3D Flip ---- */
+.tile-perspective {
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+.tile-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.tile-flipper.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.tile-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tile-front {
+  z-index: 2;
+}
+
+.tile-back {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+/* Info button (glass pill) */
+.info-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 20;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+}
+
+.info-btn:hover {
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+
+.info-btn:active {
+  transform: scale(0.9);
+}
+
+/* ---- Metro progress ---- */
+.metro-dot {
+  transition: all 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+/* ---- Metro inputs ---- */
+.metro-input {
+  background: transparent;
+  border: 2px solid rgba(232, 224, 216, 0.2);
+  color: #E8E0D8;
+  padding: 12px 14px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.metro-input::placeholder {
+  color: rgba(232, 224, 216, 0.35);
+}
+
+.metro-input:focus {
+  border-color: var(--metro-cta);
+}
+
+.metro-input-error {
+  border-color: var(--metro-error);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(232, 224, 216, 0.15); }
+
+/* ---- Desktop shell ---- */
+@media (min-width: 768px) {
+  .app-shell {
+    display: flex;
+    min-height: 100vh;
+    background: var(--desktop-bg);
+  }
+
+  .app-phone {
+    width: 420px;
+    height: 100dvh;
+    background: var(--metro-bg);
+    position: relative;
+    border-right: 1px solid rgba(232, 224, 216, 0.06);
+    overflow: hidden;
+  }
+
+  .app-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px 56px;
+  }
 }
