@@ -157,6 +157,20 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} font-sans antialiased`}>
         {children}
+        <script src="https://swetrix.org/swetrix.js" defer />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener('DOMContentLoaded',function(){swetrix.init('OzoHZf66XmPp',{apiURL:'https://swetrixapi-wwscgog80c8g0og4o4gow4kk.qreastech.com/log'});swetrix.trackViews()})`,
+          }}
+        />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://swetrixapi-wwscgog80c8g0og4o4gow4kk.qreastech.com/log/noscript?pid=OzoHZf66XmPp"
+            alt=""
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </noscript>
       </body>
     </html>
   );
