@@ -61,7 +61,7 @@ export async function createLead(data: LeadData): Promise<string> {
   // 1. Create Person
   const personResult = await gql<{ createPerson: { id: string } }>(`
     mutation CreatePerson($data: PersonCreateInput!) {
-      createPerson(data: $data) {
+      createPerson(data: $data, upsert: true) {
         id
       }
     }
