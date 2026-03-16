@@ -1,11 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#1A1A1A",
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "Costa del Sol Invest | Ontdek uw Ideale Vastgoedinvestering",
@@ -86,9 +95,20 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  other: {
+    "geo.region": "ES-MA",
+    "geo.placename": "Costa del Sol",
+    "geo.position": "36.7213;-4.4214",
+    "ICBM": "36.7213, -4.4214",
+    "content-language": "nl",
+    "author": "Costa del Sol Invest - Data Changes B.V.",
+    "rating": "general",
+    "revisit-after": "7 days",
   },
 };
 
@@ -131,6 +151,99 @@ const jsonLd = {
         "@type": "Place",
         name: "Costa del Sol, Málaga, Spain",
       },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://costadelsolinvest.nl/#localbusiness",
+      name: "Costa del Sol Invest",
+      description:
+        "Vastgoedinvesteringsadviseur voor de Costa del Sol. Gratis investeringsscan voor Nederlandse, Belgische en Duitse investeerders.",
+      url: "https://costadelsolinvest.nl",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Nassausingel 3",
+        addressLocality: "Nijmegen",
+        postalCode: "6511 EV",
+        addressCountry: "NL",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 51.8426,
+        longitude: 5.8585,
+      },
+      priceRange: "€150.000 - €1.500.000+",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://costadelsolinvest.nl/#service",
+      name: "Gratis Investeringsscan Costa del Sol",
+      description:
+        "Persoonlijke vastgoedinvesteringsanalyse voor Nederlandse en Belgische investeerders aan de Costa del Sol",
+      provider: {
+        "@id": "https://costadelsolinvest.nl/#organization",
+      },
+      areaServed: {
+        "@type": "Place",
+        name: "Costa del Sol, Spanje",
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 36.7213,
+          longitude: -4.4214,
+        },
+      },
+      serviceType: "Real Estate Investment Advisory",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "EUR",
+        description:
+          "Gratis persoonlijke investeringsscan in 2 minuten",
+      },
+    },
+    {
+      "@type": "HowTo",
+      name: "Hoe werkt de Investeringsscan?",
+      description:
+        "In 4 stappen ontdekt u uw ideale vastgoedinvestering aan de Costa del Sol",
+      totalTime: "PT2M",
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Kies uw motivatie",
+          text: "Selecteer wat u het meest aanspreekt: lifestyle, rendement, locatie of groeimarkt",
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Verfijn uw voorkeur",
+          text: "Specificeer uw interesse binnen de gekozen categorie",
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Kies uw woningtype",
+          text: "Selecteer het type vastgoed: appartement, penthouse, villa of townhouse",
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Bepaal uw budget",
+          text: "Kies uw investeringsbudget en ontvang uw persoonlijke investeringsprofiel",
+        },
+      ],
     },
     {
       "@type": "FAQPage",
@@ -252,6 +365,12 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <head>
+        <link rel="preconnect" href="https://swetrix.org" />
+        <link rel="dns-prefetch" href="https://swetrix.org" />
+        <link
+          rel="preconnect"
+          href="https://swetrixapi-wwscgog80c8g0og4o4gow4kk.qreastech.com"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
