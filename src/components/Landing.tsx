@@ -33,7 +33,7 @@ export default function Landing({ onStart }: LandingProps) {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-between h-full px-5 py-5">
         {/* Top bar: brand + language — mobile only */}
-        <div className="metro-slide-in flex items-center justify-between mb-2 md:hidden">
+        <header className="metro-slide-in flex items-center justify-between mb-2 md:hidden">
           <div className="flex items-center gap-3">
             <Image
               src="/logo.svg"
@@ -48,7 +48,7 @@ export default function Landing({ onStart }: LandingProps) {
             </span>
           </div>
           <LanguageSelector />
-        </div>
+        </header>
 
         {/* Hero text */}
         <div className="metro-slide-in flex-1 flex flex-col justify-center py-6">
@@ -106,7 +106,7 @@ export default function Landing({ onStart }: LandingProps) {
         </div>
 
         {/* Footer — copyright & company info */}
-        <div className="mt-2 pt-3 border-t border-white/10">
+        <footer className="mt-2 pt-3 border-t border-white/10">
           <p className="text-[9px] text-white/30 leading-relaxed text-center">
             &copy; {new Date().getFullYear()} costadelsolinvest.nl | {t.footer.initiative}{" "}
             <span className="text-white/40 font-medium">Data Changes B.V.</span>
@@ -119,7 +119,7 @@ export default function Landing({ onStart }: LandingProps) {
             {" | "}
             <a href="/voorwaarden" className="text-white/20 hover:text-white/40 transition-colors">{t.footer.termsLink}</a>
           </p>
-        </div>
+        </footer>
       </div>
     </div>
   );

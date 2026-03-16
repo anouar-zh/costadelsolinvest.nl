@@ -22,9 +22,31 @@ export const metadata: Metadata = {
     "beleggen vastgoed spanje",
     "villa kopen costa del sol",
     "nieuwbouw costa del sol",
+    "onroerend goed costa del sol",
+    "woning kopen spanje investering",
+    "vakantiewoning costa del sol",
+    "rendement vastgoed spanje",
+    "appartement kopen costa del sol",
+    "verhuren costa del sol",
+    "costa del sol property investment",
+    "buy property costa del sol",
+    "rental yield costa del sol",
+    "Immobilien Costa del Sol kaufen",
+    "invertir en Costa del Sol",
+    "vastgoedprijzen costa del sol",
+    "mijas vastgoed",
+    "malaga vastgoed investeren",
+    "nederlandse makelaar costa del sol",
   ],
   alternates: {
     canonical: "https://costadelsolinvest.nl",
+    languages: {
+      "nl": "https://costadelsolinvest.nl",
+      "en": "https://costadelsolinvest.nl",
+      "de": "https://costadelsolinvest.nl",
+      "es": "https://costadelsolinvest.nl",
+      "x-default": "https://costadelsolinvest.nl",
+    },
   },
   icons: {
     icon: [
@@ -118,7 +140,7 @@ const jsonLd = {
           name: "Wat is het gemiddelde huurrendement aan de Costa del Sol?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Het gemiddelde bruto huurrendement aan de Costa del Sol ligt tussen 5-8%, afhankelijk van de locatie en het type vastgoed.",
+            text: "Het gemiddelde bruto huurrendement aan de Costa del Sol ligt tussen 5-8%, afhankelijk van de locatie en het type vastgoed. Vakantieverhuur in populaire gebieden zoals Marbella en Estepona kan oplopen tot 8-10% bruto rendement in het hoogseizoen.",
           },
         },
         {
@@ -126,7 +148,7 @@ const jsonLd = {
           name: "Hoeveel stijgen vastgoedprijzen aan de Costa del Sol?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "In 2025 stegen de vastgoedprijzen in de provincie Málaga met gemiddeld 13,8% op jaarbasis. Voor 2026 wordt een groei van 5-9% verwacht.",
+            text: "In 2025 stegen de vastgoedprijzen in de provincie Málaga met gemiddeld 13,8% op jaarbasis. Voor 2026 wordt een groei van 5-9% verwacht. De afgelopen 5 jaar zijn prijzen in toplocaties met 40-60% gestegen.",
           },
         },
         {
@@ -134,7 +156,87 @@ const jsonLd = {
           name: "Wat kost een woning aan de Costa del Sol?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "De gemiddelde prijs per m² varieert per locatie: Marbella €4.260-5.258/m², Estepona €3.600-3.854/m², Mijas €2.768-3.800/m², Málaga stad €3.549/m².",
+            text: "De gemiddelde prijs per m² varieert per locatie: Marbella €4.260-5.258/m², Estepona €3.600-3.854/m², Mijas €2.768-3.800/m², Málaga stad €3.549/m². Instapwoningen beginnen vanaf circa €150.000 voor een appartement.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is het slim om nu te investeren in vastgoed aan de Costa del Sol?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, de Costa del Sol blijft een sterke investeringsmarkt. Met 300+ zonnedagen per jaar, groeiend toerisme, verbeterde infrastructuur en een stijgende vraag van Noord-Europese kopers biedt de regio aantrekkelijke rendementen. Nederlandse kopers groeiden met 38% in het eerste halfjaar van 2025.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Welke bijkomende kosten zijn er bij het kopen van een huis in Spanje?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "De bijkomende kosten bij aankoop in Spanje bedragen circa 10-13% van de koopprijs. Dit omvat overdrachtsbelasting (7-10% voor bestaande bouw, 10% BTW voor nieuwbouw), notariskosten (0,5-1%), registerkosten (0,5-1%) en juridische begeleiding (1-1,5%).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Heb ik als Nederlander een NIE-nummer nodig om een huis te kopen in Spanje?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, een NIE-nummer (Número de Identidad de Extranjero) is verplicht voor elke vastgoedtransactie in Spanje. U kunt dit aanvragen bij het Spaanse consulaat in Nederland of lokaal in Spanje. De aanvraag duurt gemiddeld 2-4 weken.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kan ik als Nederlander een hypotheek krijgen in Spanje?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, Spaanse banken verstrekken hypotheken aan niet-residenten tot 60-70% van de taxatiewaarde. De rente ligt momenteel tussen 3-4,5%. Een hypotheek in Spanje kan fiscaal voordelig zijn voor verhuurders.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hoeveel belasting betaal ik over huurinkomsten in Spanje?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Als EU-inwoner betaalt u 19% belasting over netto huurinkomsten in Spanje. U mag kosten zoals onderhoud, hypotheekrente en afschrijving aftrekken. Door het dubbelbelastingverdrag Nederland-Spanje wordt dubbele belasting voorkomen.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Wat is de beste locatie aan de Costa del Sol om te investeren?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "De beste locatie hangt af van uw strategie. Marbella en de Golden Triangle bieden luxe met hoge waardestijging. Estepona is een groeimarkt met uitstekend rendement. Mijas biedt de beste prijs-kwaliteitverhouding. Málaga stad groeit als stadsinvestering met hoge huurvraag.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kan ik mijn woning aan de Costa del Sol verhuren aan toeristen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, maar u heeft een verhuurlicentie (licencia turística) nodig van de Junta de Andalucía. De regelgeving verschilt per gemeente. In veel gebieden aan de Costa del Sol is vakantieverhuur toegestaan, maar er gelden specifieke eisen voor registratie en veiligheid.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Moet ik ook in Nederland belasting betalen over mijn Spaanse woning?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Door het dubbelbelastingverdrag tussen Nederland en Spanje wordt uw Spaanse vastgoed in box 3 vrijgesteld via de vrijstellingsmethode. U geeft het wel aan in uw Nederlandse aangifte, maar betaalt effectief alleen in Spanje belasting over de inkomsten.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Hoeveel kan ik verdienen met vakantieverhuur aan de Costa del Sol?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Een goed gelegen appartement van €200.000-€300.000 kan €15.000-€25.000 bruto per jaar opleveren via vakantieverhuur. In toplocaties zoals Marbella en Puerto Banús liggen de opbrengsten hoger. Het hoogseizoen (juni-september) levert 50-60% van de jaaromzet op.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is er een vastgoedbubbel aan de Costa del Sol?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Analisten zien momenteel geen bubbel. De huidige prijsstijgingen worden ondersteund door reële vraag, beperkt nieuwbouwaanbod, en een diverse kopersmarkt. De prijzen liggen in veel gebieden nog 20-30% onder het piekjaar 2007, gecorrigeerd voor inflatie.",
           },
         },
       ],

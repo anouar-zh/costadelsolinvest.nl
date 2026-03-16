@@ -15,12 +15,12 @@ export default function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-shell">
       {/* Phone column */}
-      <div className="app-phone">
+      <main className="app-phone">
         {children}
-      </div>
+      </main>
 
       {/* Desktop side panel */}
-      <div className="app-side hidden md:flex relative overflow-hidden">
+      <aside className="app-side hidden md:flex relative overflow-hidden">
         <Image
           src="/images/side-mediterranean.jpg"
           alt="Mediterranean coast"
@@ -32,9 +32,9 @@ export default function AppShell({ children }: AppShellProps) {
 
         <div className="relative z-10 max-w-md mt-auto">
           {/* Language selector on desktop */}
-          <div className="mb-8">
+          <nav aria-label="Language selection" className="mb-8">
             <LanguageSelector />
-          </div>
+          </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <Image
@@ -99,7 +99,7 @@ export default function AppShell({ children }: AppShellProps) {
             <span>{t.trust.dutchTeam}</span>
           </div>
         </div>
-      </div>
+      </aside>
     </div>
   );
 }
