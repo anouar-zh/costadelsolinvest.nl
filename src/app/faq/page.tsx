@@ -184,13 +184,21 @@ export default function FAQPage() {
                 Doe onze gratis investeringsscan in 2 minuten en ontvang een
                 persoonlijk investeringsprofiel voor de Costa del Sol.
               </p>
-              <Link
-                href="/"
-                className="inline-block py-3 px-6 text-[14px] font-semibold text-white tracking-wide"
-                style={{ backgroundColor: "#E8762D" }}
-              >
-                Start Mijn Investeringsscan
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/"
+                  className="inline-block py-3 px-6 text-[14px] font-semibold text-white tracking-wide"
+                  style={{ backgroundColor: "#E8762D" }}
+                >
+                  Start Mijn Investeringsscan
+                </Link>
+                <Link
+                  href="/gids/investeren-costa-del-sol"
+                  className="inline-block py-3 px-6 text-[14px] font-medium text-white/70 bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                >
+                  Lees de Complete Gids
+                </Link>
+              </div>
             </section>
 
             {/* SEO-rich content section */}
@@ -225,28 +233,57 @@ export default function FAQPage() {
             </section>
           </main>
 
-          <footer className="mt-10 pt-4 border-t border-white/10">
-            <p className="text-[9px] text-metro-muted/50 text-center">
-              &copy; {new Date().getFullYear()} costadelsolinvest.nl | Een
-              initiatief van{" "}
-              <span className="text-metro-muted/70 font-medium">
-                Data Changes B.V.
-              </span>
+          {/* Sources */}
+          <aside className="mt-8 text-[10px] text-white/20 leading-relaxed">
+            <p>
+              <strong>Bronnen:</strong> Idealista, INE (Instituto Nacional
+              de Estad&iacute;stica), Tinsa, Registradores de Espa&ntilde;a,
+              Junta de Andaluc&iacute;a. Gegevens bijgewerkt: maart 2026.
             </p>
-            <p className="text-[8px] text-center mt-1">
+            <p className="mt-1">
+              <strong>Disclaimer:</strong> Deze informatie is uitsluitend
+              bedoeld als algemene ori&euml;ntatie en vormt geen financieel,
+              fiscaal of juridisch advies. Costa del Sol Invest / Data Changes
+              B.V. is geen beleggingsadviseur in de zin van de Wft.
+            </p>
+          </aside>
+
+          <footer className="mt-8 pt-4 border-t border-white/10">
+            <nav className="flex flex-wrap justify-center gap-3 mb-3">
+              <Link
+                href="/"
+                className="text-[10px] text-white/25 hover:text-white/40 transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/gids/investeren-costa-del-sol"
+                className="text-[10px] text-white/25 hover:text-white/40 transition-colors"
+              >
+                Investeringsgids
+              </Link>
+              <Link
+                href="/over-ons"
+                className="text-[10px] text-white/25 hover:text-white/40 transition-colors"
+              >
+                Over Ons
+              </Link>
               <Link
                 href="/privacy"
-                className="text-white/20 hover:text-white/40 transition-colors"
+                className="text-[10px] text-white/25 hover:text-white/40 transition-colors"
               >
                 Privacy
               </Link>
-              {" | "}
               <Link
                 href="/voorwaarden"
-                className="text-white/20 hover:text-white/40 transition-colors"
+                className="text-[10px] text-white/25 hover:text-white/40 transition-colors"
               >
                 Voorwaarden
               </Link>
+            </nav>
+            <p className="text-[9px] text-metro-muted/50 text-center">
+              &copy; {new Date().getFullYear()} costadelsolinvest.nl | Data
+              Changes B.V. | KvK 93372051
             </p>
           </footer>
         </div>

@@ -158,6 +158,62 @@ export default function SEOContent() {
             </dd>
           </dl>
         </section>
+
+        <section id="ervaringen">
+          <h2>Ervaringen van Nederlandse Investeerders</h2>
+          <blockquote>
+            <p>
+              &ldquo;Dankzij de scan wisten wij precies wat we zochten. Binnen
+              drie maanden hadden we ons droomappartement in Estepona.&rdquo;
+            </p>
+            <footer>Peter V., Amsterdam — Appartement in Estepona</footer>
+          </blockquote>
+          <blockquote>
+            <p>
+              &ldquo;De data-gedreven aanpak overtuigde ons. We kregen een
+              helder beeld van de rendementen per locatie en kozen uiteindelijk
+              voor Mijas — een gouden greep.&rdquo;
+            </p>
+            <footer>Sandra &amp; Mark T., Utrecht — Townhouse in Mijas</footer>
+          </blockquote>
+          <blockquote>
+            <p>
+              &ldquo;Als expat wilde ik investeren maar wist niet waar te
+              beginnen. Het team sprak mijn taal en begeleidde me door het hele
+              Spaanse aankoopproces.&rdquo;
+            </p>
+            <footer>Thomas K., Antwerpen — Penthouse in M&aacute;laga</footer>
+          </blockquote>
+        </section>
+
+        <section id="over-ons">
+          <h2>Over Costa del Sol Invest</h2>
+          <p>
+            Costa del Sol Invest is een initiatief van Data Changes B.V.
+            (KvK 93372051), gevestigd aan de Nassausingel 3, 6511 EV Nijmegen.
+            Ons Nederlandstalig team combineert data-analyse met lokale
+            marktexpertise om investeerders te begeleiden bij het vinden van
+            vastgoed aan de Costa del Sol.
+          </p>
+          <p>
+            Wij zijn geen beleggingsadviseur in de zin van de Wet op het
+            financieel toezicht (Wft). Onze dienstverlening is informatief van
+            aard. Raadpleeg altijd een onafhankelijk financieel of juridisch
+            adviseur voordat u investeringsbeslissingen neemt.
+          </p>
+        </section>
+
+        <nav id="sitemap">
+          <h2>Sitemap</h2>
+          <ul>
+            <li><a href="/">Home — Investeringsscan</a></li>
+            <li><a href="/faq">Veelgestelde Vragen</a></li>
+            <li><a href="/gids/investeren-costa-del-sol">Investeringsgids Costa del Sol</a></li>
+            <li><a href="/over-ons">Over Ons</a></li>
+            <li><a href="/privacy">Privacybeleid</a></li>
+            <li><a href="/voorwaarden">Algemene Voorwaarden</a></li>
+          </ul>
+        </nav>
       </article>
     </div>
   );

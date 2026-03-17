@@ -107,17 +107,19 @@ export default function Landing({ onStart }: LandingProps) {
 
         {/* Footer — copyright & company info */}
         <footer className="mt-2 pt-3 border-t border-white/10">
+          <nav className="flex flex-wrap justify-center gap-2 mb-1.5">
+            <a href="/faq" className="text-[8px] text-white/20 hover:text-white/40 transition-colors">FAQ</a>
+            <a href="/gids/investeren-costa-del-sol" className="text-[8px] text-white/20 hover:text-white/40 transition-colors">Gids</a>
+            <a href="/over-ons" className="text-[8px] text-white/20 hover:text-white/40 transition-colors">Over Ons</a>
+            <a href="/privacy" className="text-[8px] text-white/20 hover:text-white/40 transition-colors">{t.footer.privacyLink}</a>
+            <a href="/voorwaarden" className="text-[8px] text-white/20 hover:text-white/40 transition-colors">{t.footer.termsLink}</a>
+          </nav>
           <p className="text-[9px] text-white/30 leading-relaxed text-center">
             &copy; {new Date().getFullYear()} costadelsolinvest.nl | {t.footer.initiative}{" "}
             <span className="text-white/40 font-medium">Data Changes B.V.</span>
           </p>
-          <p className="text-[8px] text-white/20 text-center mt-1">
+          <p className="text-[8px] text-white/20 text-center mt-0.5">
             Nassausingel 3, 6511 EV Nijmegen | KvK 93372051
-          </p>
-          <p className="text-[8px] text-center mt-1">
-            <a href="/privacy" className="text-white/20 hover:text-white/40 transition-colors">{t.footer.privacyLink}</a>
-            {" | "}
-            <a href="/voorwaarden" className="text-white/20 hover:text-white/40 transition-colors">{t.footer.termsLink}</a>
           </p>
         </footer>
       </div>
